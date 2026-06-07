@@ -176,3 +176,25 @@ same here: we *want* a bottleneck to control flow.
 pour one out to the og, [`bottleneck`](https://www.npmjs.com/package/bottleneck), who paved the intuitive frame — abandoned since 2020.
 
 we pick up where bottleneck left off; now, with wrappers and dependency injection.
+
+# defaults
+
+`genBottleneck()` with no config returns an unlimited bottleneck:
+- `concurrency: Infinity` — no concurrency limit
+- `velocity: null` — no rate limit
+
+this is intentional:
+- tests run instantly without delays
+- inject unlimited bottleneck for test mocks
+- only configure limits where you need them
+
+```ts
+// no config = unlimited = fast tests
+const testBottleneck = genBottleneck();
+
+await Promise.all([
+  wrapped({ n: 1 }, { bottleneck: testBottleneck }),
+  wrapped({ n: 2 }, { bottleneck: testBottleneck }),
+  wrapped({ n: 3 }, { bottleneck: testBottleneck }),
+]);
+```

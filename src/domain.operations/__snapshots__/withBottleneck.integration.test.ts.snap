@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`withBottleneck given: [case3] wrapped fn that throws when: [t0] error occurs then: slot is released and error propagates to caller 1`] = `[CustomError: intentional test error]`;

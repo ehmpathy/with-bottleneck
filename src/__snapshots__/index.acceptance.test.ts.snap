@@ -1,0 +1,197 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`with-bottleneck acceptance given: [case2] genBottleneck with valid limits when: [t0] called with concurrency and velocity limits then: shape matches snapshot 1`] = `
+{
+  "semaphore": {
+    "active": 0,
+    "queued": 0,
+  },
+}
+`;
+
+exports[`with-bottleneck acceptance given: [case3.5] genBottleneck with empty limits when: [t0] called with no arguments then: shape matches snapshot 1`] = `
+{
+  "semaphore": {
+    "active": 0,
+    "queued": 0,
+  },
+}
+`;
+
+exports[`with-bottleneck acceptance given: [case3] genBottleneck with invalid limits when: [t0] called with concurrency 0 then: throws BadRequestError 1`] = `
+[Error: BadRequestError: concurrency must be positive
+
+{
+  "field": "concurrency",
+  "value": 0,
+  "hint": "use a positive integer for concurrency limit, or omit for unlimited"
+}]
+`;
+
+exports[`with-bottleneck acceptance given: [case3] genBottleneck with invalid limits when: [t1] called with negative concurrency then: throws BadRequestError 1`] = `
+[Error: BadRequestError: concurrency must be positive
+
+{
+  "field": "concurrency",
+  "value": -5,
+  "hint": "use a positive integer for concurrency limit, or omit for unlimited"
+}]
+`;
+
+exports[`with-bottleneck acceptance given: [case3] genBottleneck with invalid limits when: [t2] called with velocity quantity 0 then: throws BadRequestError 1`] = `
+[Error: BadRequestError: velocity.quantity must be positive
+
+{
+  "field": "velocity.quantity",
+  "value": 0,
+  "hint": "use a positive integer for velocity quantity"
+}]
+`;
+
+exports[`with-bottleneck acceptance given: [case3] genBottleneck with invalid limits when: [t3] called with negative velocity quantity then: throws BadRequestError 1`] = `
+[Error: BadRequestError: velocity.quantity must be positive
+
+{
+  "field": "velocity.quantity",
+  "value": -5,
+  "hint": "use a positive integer for velocity quantity"
+}]
+`;
+
+exports[`with-bottleneck acceptance given: [case3] genBottleneck with invalid limits when: [t4] called with non-integer concurrency then: throws BadRequestError 1`] = `
+[Error: BadRequestError: concurrency must be an integer
+
+{
+  "field": "concurrency",
+  "value": 1.5,
+  "hint": "use a positive integer for concurrency limit, or Infinity for unlimited"
+}]
+`;
+
+exports[`with-bottleneck acceptance given: [case3] genBottleneck with invalid limits when: [t5] called with non-integer velocity quantity then: throws BadRequestError 1`] = `
+[Error: BadRequestError: velocity.quantity must be an integer
+
+{
+  "field": "velocity.quantity",
+  "value": 2.5,
+  "hint": "use a positive integer for velocity quantity"
+}]
+`;
+
+exports[`with-bottleneck acceptance given: [case3] genBottleneck with invalid limits when: [t6] called with zero velocity duration then: throws BadRequestError 1`] = `
+[Error: BadRequestError: velocity.duration must be positive
+
+{
+  "field": "velocity.duration",
+  "value": {
+    "seconds": 0
+  },
+  "hint": "specify duration as { seconds: 1 } or ISO 8601 string"
+}]
+`;
+
+exports[`with-bottleneck acceptance given: [case3] genBottleneck with invalid limits when: [t7] called with negative velocity duration then: throws BadRequestError 1`] = `
+[Error: BadRequestError: velocity.duration must be positive
+
+{
+  "field": "velocity.duration",
+  "value": {
+    "seconds": -1
+  },
+  "hint": "specify duration as { seconds: 1 } or ISO 8601 string"
+}]
+`;
+
+exports[`with-bottleneck acceptance given: [case3] genBottleneck with invalid limits when: [t8] called with velocity absent duration then: throws BadRequestError 1`] = `
+[Error: BadRequestError: velocity.duration is required
+
+{
+  "field": "velocity.duration",
+  "hint": "specify duration as { seconds: 1 } or ISO 8601 string"
+}]
+`;
+
+exports[`with-bottleneck acceptance given: [case4] withBottleneck wraps async function when: [t0] wrapped function called then: preserves signature and respects bottleneck 1`] = `
+{
+  "result": 14,
+}
+`;
+
+exports[`with-bottleneck acceptance given: [case4] withBottleneck wraps async function when: [t1] wrapped function throws then: error propagates to caller and slot is released 1`] = `[TestError: test error message]`;
+
+exports[`with-bottleneck acceptance given: [case5] concurrency-controlled scenario when: [t0] bottleneck is created then: initial state is clean 1`] = `
+{
+  "active": 0,
+  "queued": 0,
+}
+`;
+
+exports[`with-bottleneck acceptance given: [case5] concurrency-controlled scenario when: [t1] concurrent operations execute then: concurrency limit is enforced 1`] = `
+{
+  "active": 2,
+  "queued": 0,
+  "state": "at capacity",
+}
+`;
+
+exports[`with-bottleneck acceptance given: [case5] concurrency-controlled scenario when: [t1] concurrent operations execute then: concurrency limit is enforced 2`] = `
+{
+  "active": 2,
+  "queued": 1,
+  "state": "blocked",
+  "thirdCompleted": false,
+}
+`;
+
+exports[`with-bottleneck acceptance given: [case6.5] velocity with ISO string duration when: [t0] bottleneck with ISO string duration created then: schedule respects rate limit with string format 1`] = `
+{
+  "state": "blocked by velocity",
+  "thirdCompleted": false,
+}
+`;
+
+exports[`with-bottleneck acceptance given: [case6] velocity-controlled scenario when: [t0] bottleneck with velocity created then: schedule respects rate limit 1`] = `
+{
+  "fourthCompleted": false,
+  "state": "blocked by velocity",
+}
+`;
+
+exports[`with-bottleneck acceptance given: [case7] withBottleneck with supplier when: [t0] bottleneck resolved from context then: respects per-context bottleneck 1`] = `
+{
+  "results": {
+    "result1": 10,
+    "result2": 14,
+  },
+  "states": {
+    "bottleneck1Active": 0,
+    "bottleneck2Active": 0,
+  },
+}
+`;
+
+exports[`with-bottleneck acceptance given: [case7] withBottleneck with supplier when: [t1] unlimited bottleneck for testability then: fast tests without delay via injected unlimited bottleneck 1`] = `
+{
+  "results": [
+    3,
+    6,
+    9,
+    12,
+    15,
+  ],
+  "scenario": "unlimited bottleneck for testability",
+  "state": {
+    "active": 0,
+    "queued": 0,
+  },
+}
+`;
+
+exports[`with-bottleneck acceptance given: [case8] semaphore direct access when: [t1] release without acquire then: throws UnexpectedCodePathError 1`] = `
+[Error: UnexpectedCodePathError: release called without prior acquire
+
+{
+  "active": 0,
+  "hint": "ensure acquire() is awaited before release()"
+}]
+`;

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`genBottleneck given: [case2] limits with velocity only when: [t0] bottleneck created then: semaphore allows unlimited concurrency 1`] = `
+{
+  "allStartedConcurrently": true,
+  "operationCount": 50,
+  "scenario": "velocity-only allows unlimited concurrency",
+}
+`;
+
+exports[`genBottleneck given: [case2] limits with velocity only when: [t0] bottleneck created then: throttle enforces velocity 1`] = `
+{
+  "state": "blocked by velocity",
+  "thirdDone": false,
+}
+`;
