@@ -2,7 +2,7 @@
   "name": "with-bottleneck",
   "author": "ehmpathy",
   "description": "rate limit and concurrency control utilities",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "repository": "ehmpathy/with-bottleneck",
   "homepage": "https://github.com/ehmpathy/with-bottleneck",
   "keywords": [
