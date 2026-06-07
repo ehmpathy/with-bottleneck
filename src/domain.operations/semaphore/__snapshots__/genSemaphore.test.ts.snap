@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`genSemaphore given: [case2] release without acquire when: [t0] release called with active 0 then: throws UnexpectedCodePathError with details 1`] = `
+[Error: UnexpectedCodePathError: release called without prior acquire
+
+{
+  "active": 0,
+  "hint": "ensure acquire() is awaited before release()"
+}]
+`;

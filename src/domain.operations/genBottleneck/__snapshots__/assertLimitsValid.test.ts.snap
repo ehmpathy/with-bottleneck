@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`assertLimitsValid given: [case2] invalid limits when: [t0] concurrency is zero then: throws BadRequestError with details 1`] = `
+[Error: BadRequestError: concurrency must be positive
+
+{
+  "field": "concurrency",
+  "value": 0,
+  "hint": "use a positive integer for concurrency limit, or omit for unlimited"
+}]
+`;
+
+exports[`assertLimitsValid given: [case2] invalid limits when: [t1] concurrency is negative then: throws BadRequestError with details 1`] = `
+[Error: BadRequestError: concurrency must be positive
+
+{
+  "field": "concurrency",
+  "value": -1,
+  "hint": "use a positive integer for concurrency limit, or omit for unlimited"
+}]
+`;
+
+exports[`assertLimitsValid given: [case2] invalid limits when: [t2] velocity quantity is zero then: throws BadRequestError with details 1`] = `
+[Error: BadRequestError: velocity.quantity must be positive
+
+{
+  "field": "velocity.quantity",
+  "value": 0,
+  "hint": "use a positive integer for velocity quantity"
+}]
+`;
+
+exports[`assertLimitsValid given: [case2] invalid limits when: [t3] velocity quantity is negative then: throws BadRequestError with details 1`] = `
+[Error: BadRequestError: velocity.quantity must be positive
+
+{
+  "field": "velocity.quantity",
+  "value": -5,
+  "hint": "use a positive integer for velocity quantity"
+}]
+`;
+
+exports[`assertLimitsValid given: [case2] invalid limits when: [t4] concurrency is non-integer then: throws BadRequestError with details 1`] = `
+[Error: BadRequestError: concurrency must be an integer
+
+{
+  "field": "concurrency",
+  "value": 1.5,
+  "hint": "use a positive integer for concurrency limit, or Infinity for unlimited"
+}]
+`;
+
+exports[`assertLimitsValid given: [case2] invalid limits when: [t5] velocity quantity is non-integer then: throws BadRequestError with details 1`] = `
+[Error: BadRequestError: velocity.quantity must be an integer
+
+{
+  "field": "velocity.quantity",
+  "value": 2.5,
+  "hint": "use a positive integer for velocity quantity"
+}]
+`;
+
+exports[`assertLimitsValid given: [case2] invalid limits when: [t6] velocity duration is absent then: throws BadRequestError with details 1`] = `
+[Error: BadRequestError: velocity.duration is required
+
+{
+  "field": "velocity.duration",
+  "hint": "specify duration as { seconds: 1 } or ISO 8601 string"
+}]
+`;
+
+exports[`assertLimitsValid given: [case4] invalid velocity duration when: [t0] velocity duration is zero then: throws BadRequestError with details 1`] = `
+[Error: BadRequestError: velocity.duration must be positive
+
+{
+  "field": "velocity.duration",
+  "value": {
+    "seconds": 0
+  },
+  "hint": "specify duration as { seconds: 1 } or ISO 8601 string"
+}]
+`;
+
+exports[`assertLimitsValid given: [case4] invalid velocity duration when: [t1] velocity duration is negative then: throws BadRequestError with details 1`] = `
+[Error: BadRequestError: velocity.duration must be positive
+
+{
+  "field": "velocity.duration",
+  "value": {
+    "seconds": -1
+  },
+  "hint": "specify duration as { seconds: 1 } or ISO 8601 string"
+}]
+`;

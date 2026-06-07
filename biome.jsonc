@@ -14,7 +14,8 @@
       "!**/node_modules",
       "!**/.artifact",
       "!**/.generated",
-      "!**/.test*"
+      "!**/.test*",
+      "!**/.agent"
     ]
   },
   "formatter": {

@@ -27,6 +27,7 @@ const config: Config = {
     // 'node_modules/(?!(@octokit|universal-user-agent|before-after-hook)/)',
   ],
   testMatch: ['**/*.acceptance.test.ts', '!**/.yalc/**'],
+  testPathIgnorePatterns: ['/node_modules/', '/.agent/'],
   setupFilesAfterEnv: ['./jest.acceptance.env.ts'],
 
   // use 50% of threads to leave headroom for other processes
