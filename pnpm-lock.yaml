@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      helpful-errors:
+        specifier: 1.5.3
+        version: 1.5.3
       iso-time:
         specifier: 1.11.7
         version: 1.11.7
@@ -69,9 +72,6 @@ importers:
       esbuild-register:
         specifier: 3.6.0
         version: 3.6.0(esbuild@0.25.12)
-      helpful-errors:
-        specifier: 1.5.3
-        version: 1.5.3
       husky:
         specifier: 8.0.3
         version: 8.0.3
