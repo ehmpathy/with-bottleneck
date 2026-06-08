@@ -1,4 +1,4 @@
-import type { Bottleneck } from '../../domain.objects/Bottleneck';
+import type { Bottleneck } from '@src/domain.objects/Bottleneck';
 
 /**
  * .what = derives bottleneck from supplier or static instance

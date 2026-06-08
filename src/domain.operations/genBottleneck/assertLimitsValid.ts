@@ -1,7 +1,7 @@
 import { BadRequestError } from 'helpful-errors';
 import { toMilliseconds } from 'iso-time';
 
-import type { BottleneckLimits } from '../../domain.objects/Bottleneck';
+import type { BottleneckLimits } from '@src/domain.objects/Bottleneck';
 
 /**
  * .what = validates bottleneck limits configuration

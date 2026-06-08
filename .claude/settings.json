@@ -54,6 +54,12 @@
           },
           {
             "type": "command",
+            "command": "./node_modules/.bin/rhachet roles boot --role dispatcher",
+            "timeout": 10,
+            "author": "repo=bhuild/role=dispatcher"
+          },
+          {
+            "type": "command",
             "command": "./node_modules/.bin/rhachet roles boot --role dreamer",
             "timeout": 10,
             "author": "repo=bhuild/role=dreamer"
@@ -72,9 +78,9 @@
           },
           {
             "type": "command",
-            "command": "./node_modules/.bin/rhachet roles boot --role dispatcher",
-            "timeout": 10,
-            "author": "repo=bhuild/role=dispatcher"
+            "command": "./node_modules/.bin/rhachet roles boot --role librarian",
+            "timeout": 30,
+            "author": "repo=bhrain/role=librarian"
           }
         ]
       },

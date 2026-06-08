@@ -1,6 +1,7 @@
 import { getError, given, then, when } from 'test-fns';
 
-import type { Bottleneck } from '../domain.objects/Bottleneck';
+import type { Bottleneck } from '@src/domain.objects/Bottleneck';
+
 import { genBottleneck } from './genBottleneck';
 import { withBottleneck } from './withBottleneck';
 
