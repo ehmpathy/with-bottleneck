@@ -1,6 +1,6 @@
 import { UnexpectedCodePathError } from 'helpful-errors';
 
-import type { BottleneckSemaphore } from '../../domain.objects/Bottleneck';
+import type { BottleneckSemaphore } from '@src/domain.objects/Bottleneck';
 
 /**
  * .what = creates a semaphore for concurrency control

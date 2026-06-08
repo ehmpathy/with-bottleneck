@@ -1,7 +1,7 @@
 import type { IsoDuration } from 'iso-time';
 import { toMilliseconds } from 'iso-time';
 
-import type { BottleneckThrottle } from '../../domain.objects/Bottleneck';
+import type { BottleneckThrottle } from '@src/domain.objects/Bottleneck';
 
 /**
  * .what = creates a throttle for velocity control

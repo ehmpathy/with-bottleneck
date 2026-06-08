@@ -1,7 +1,7 @@
 import type {
   BottleneckSemaphore,
   BottleneckThrottle,
-} from '../../domain.objects/Bottleneck';
+} from '@src/domain.objects/Bottleneck';
 
 /**
  * .what = schedules fn with semaphore and optional throttle control

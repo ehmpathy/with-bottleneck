@@ -1,4 +1,5 @@
-import type { Bottleneck } from '../domain.objects/Bottleneck';
+import type { Bottleneck } from '@src/domain.objects/Bottleneck';
+
 import { getBottleneckFromSupplier } from './withBottleneck/getBottleneckFromSupplier';
 
 /**

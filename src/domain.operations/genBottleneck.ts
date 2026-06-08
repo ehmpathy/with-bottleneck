@@ -1,7 +1,8 @@
 import type {
   Bottleneck,
   BottleneckLimits,
-} from '../domain.objects/Bottleneck';
+} from '@src/domain.objects/Bottleneck';
+
 import { asConcurrencyLimit } from './genBottleneck/asConcurrencyLimit';
 import { assertLimitsValid } from './genBottleneck/assertLimitsValid';
 import { scheduleWithLimits } from './genBottleneck/scheduleWithLimits';
