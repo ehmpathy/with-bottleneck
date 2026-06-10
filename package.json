@@ -59,7 +59,7 @@
     "test:lint:cycles": "dpdm --no-warning --no-tree --exit-code circular:1 --exclude \"$(yq -r '.exclude | join(\"|\") // \"^$\"' .dpdmrc.yaml)\" 'src/**/*.ts'"
   },
   "dependencies": {
-    "domain-objects": "0.31.9",
+    "domain-objects": "0.31.13",
     "helpful-errors": "1.7.3",
     "iso-time": "1.11.7"
   },
@@ -81,7 +81,7 @@
     "declastruct": "1.9.1",
     "declastruct-github": "1.4.0",
     "depcheck": "1.4.3",
-    "domain-objects": "0.31.9",
+    "domain-objects": "0.31.13",
     "dpdm": "4.0.1",
     "esbuild-register": "3.6.0",
     "husky": "8.0.3",
